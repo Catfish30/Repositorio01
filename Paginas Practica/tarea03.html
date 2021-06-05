@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Tarea</title>
+</head>
+<body>
+    <h3>Bienvenido al formulario</h3>
+    <img src="./assets/images/inicio.jpg" alt="inicio" height="150" width="200" title="Inicio">
+
+    <h4>Ingrese su datos personales</h4>
+
+    <label for="nombre">Nombres : </label>
+      <input type="nombre" name="nombre" id="nombre" placeholder="Ingrese sus nombres"> <br> <br>
+
+    <label for="apellido">Apellidos : </label>
+     <input type="apellido" name="apellido" id="apellido" placeholder="Ingrese sus apellidos"> <br><br>
+
+    <label for="edad">Edad: </label>
+      <input type="number" name="edad" id="edad"> <br><br>
+    
+    <label for="email">Correo Electronico : </label>
+      <input type="email" name="email" id="email" placeholder="@gmail"> <br><br>
+
+    <label for="password">Ingrese una contrasenha: </label>
+     <input type="password" name="password" id="password"> 
+
+    <label for="password">Confirme su contrasenha: </label>
+      <input type="password" name="password" id="password"> <br><br>
+
+    <h4> Tipo de documentacion: </h4>
+    <label for="dni">DNI : </label>
+        <input type="radio" name="documento" id="dni">
+    <label for="pasaporte">Pasaporte : </label>
+        <input type="radio" name="documento" id="pasaporte"> 
+
+    <h4> Su Nacionalidad: </h4>
+    <label for="peruano">Peruano</label>
+        <input type="checkbox" name="peruano" id="peruano" value="peru">
+    <label for="brasilenho">Brasilenho</label>
+        <input type="checkbox" name="brasilenho" id="brasilenho" value="brasil">
+    <label for="chileno">Chileno</label>
+        <input type="checkbox" name="chileno" id="chileno" value="chile">
+    <label for="ecuatoriano">Ecuatoriano</label>
+        <input type="checkbox" name="ecuatoriano" id="ecuatoriano" value="ecuador">
+    <label for="colombiano">Colombiano</label>
+        <input type="checkbox" name="colombiano" id="colombiano" value="colombia"> <br><br>
+
+    <h4>Curso</h4>
+    <label for="curso"> Elegir curso: </label>
+        <select name="curso" id="curso">
+            <option value="Matematicas">Matematicas</option>
+            <option value="Comunicacion">Comunicacion</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Quimica">Quimica</option>
+        </select>
+
+ 
+    <label for="fecha" >Fecha para empezar para curso:</label>
+        <input type="date" name="fecha" id="fecha" value="fecha">  <br> <br>
+
+    <input type="submit" value="Submit" name="enviar">
+
+</body>
+</html>

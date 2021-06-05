@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    
+<form> <!-- Define formulario html-->
+    
+    <label for="nombre">Ingresa tu nombre</label> <!-- Define el rotulo para un elemento -->
+    <input type="text" id="nombre" name="nombre"> <!-- Define un control de entrada de texto -->
+
+    <label for="apellido">Ingrese su apellido</label> <!-- for="" y id="" deben tener el mismo valor *-->
+    <input type="text" id="apellido" name="apellido"> <!-- id valor unico en el archivo, name valor en un grupo -->
+
+    <h3>Defina su sexo</h3>
+    <input type="radio" id="femenino" name="genero" value="femenino"> <!-- Seleccionar una opcion--> <!-- Puede utilizarse para escoger solo una opcion-->
+    <label for="femenino">Femenino</label> <!-- name="genero" tienen el mismo valor para poder solo seleccionar una opcion -->
+
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    <label for="masculino">Masculino</label>
+
+    <h3>Escoge los idiomas que hablas</h3>
+    <input type="checkbox" id="ingles" name="ingles" value="en"><label for="ingles">Ingles</label> <!-- checkbox permite insertar un vector o array de valores --> <!-- Puede utilizarse para varias opciones-->
+    <input type="checkbox" id="espanhol" name="espanhol" value="es"><label for="espanhol">Espanhol</label>
+    <input type="checkbox" id="frances" name="frances" value="fr"><label for="frances">Frances</label>
+
+    <input type="submit" value="Submit" name="enviar"> <!-- Representa un botón que, cuando es presionado, envía el formulario -->
+
+    <button type="submit">Regresar</button> <!-- Otro tipo de boton-->
+
+    <label for="curso"> Elegir curso: <!-- Select para crear lista y dentro option para crear opciones-->
+        <select name="curso" id="curso">
+            <option value="Matematicas">Matematicas</option>
+            <option value="Comunicacion">Comunicacion</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Quimica">Quimica</option>
+        </select>
+    </label>
+ 
+    <label for="fecha" >Fecha empezar curso: <!-- date para crear calendario y seleccioanr una fecha-->
+        <input type="date" name="fecha" id="fecha">
+    </label> <br> <br>
+
+
+    <input type="email" name="email">
+    <input type="password" name="password">
+
+</form>
+
+</body>
+</html>
