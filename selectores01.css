@@ -18,3 +18,48 @@ ul > li{
 nav > ul > ol > li {
     color: mediumpurple;
 }
+
+/* .nombre_clase */
+
+.titulo{
+    color: red;
+    text-decoration: underline;
+}
+.noticia{
+    background-color: yellow;
+}
+.adicional{
+    font-family: Impact;
+}
+/* # es para id */
+#importante{
+    background-color: yellowgreen;
+    text-decoration: overline !important;
+}
+/* Pseudoclases condicional o estado */
+/* de las etiquetas de tipo tr escoge las impares = odd */
+tr:nth-of-type(odd){
+    background-color: lightskyblue;
+}
+tr:nth-of-type(even){
+    background-color: lightgreen;
+}
+p:first-of-type{
+    color: purple;
+}
+
+/* ntth-of-typer() sirve para dar estilos a partes en especifico  */
+li:nth-of-type(2){
+    font-style: italic;
+    background-color: rebeccapurple;
+    color: white;
+}
+/* quitar estapcios en tablas border-spacing y border-collapse */
+tr, td, th, table{
+    border: 1px solid grey;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+table{
+    margin:0 auto;
+}

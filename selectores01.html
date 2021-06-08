@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        <h1>Selectores en CSS</h1>
+        <h1 class="titulo">Selectores en CSS</h1>
     </header>
     <nav>
         <ul>
-            <li>Item</li>
+            <li class="titulo">Item</li>
             <li>Item</li>
             <li>Item</li>
             <ol> <!-- Lista ordenada -->
@@ -24,24 +24,62 @@
     </nav>
     <main>
         <section>
-            <h2>Titulo Seccion 02</h2>
+            <h2 class="titulo">Titulo Seccion 02</h2>
             <article>
-                <h3>Articulo 01</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sint dolores cum ducimus cumque non pariatur enim. Rerum nisi debitis aliquam omnis minus, ea ducimus sequi eum sed eveniet sunt laborum neque sapiente rem doloremque quasi impedit dolorem? Laudantium quae ipsum, perferendis provident eum mollitia facere aliquid necessitatibus labore?</p>
+                <h3 class="titulo noticia">Articulo 01</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem velit sint dolores cum ducimus <span id="importante" style="text-decoration: underline;"> texto texto texto texto texto</span> cumque non pariatur enim. Rerum nisi debitis aliquam omnis minus, ea ducimus sequi eum sed eveniet sunt laborum neque sapiente rem doloremque quasi impedit dolorem? Laudantium quae ipsum, perferendis provident eum mollitia facere aliquid necessitatibus labore?</p>
             </article>
         </section>
         <section>
-            <h2>Titulo Seccion 03</h2>
+            <h2 class="titulo">Titulo Seccion 03</h2>
             <article>
-                <h3>Articulo 02</h3>
+                <h3 class="titulo noticia">Articulo 02</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab recusandae sapiente, ipsa officiis magni rem quaerat optio omnis alias nesciunt!</p>
             </article>
         </section>
+ 
+        <section>
+            <h2>Peliculas Favoritas</h2>
+            <table>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Year</th>
+                    <th>Genero</th>
+                </tr>
+                <tr>
+                    <td>Titanic</td>
+                    <td>1995</td>
+                    <td>Drama</td>
+                </tr>
+                <tr>
+                    <td>Shrek</td>
+                    <td>2001</td>
+                    <td>Animados</td>
+                </tr>
+                <tr>
+                    <td>Sweeney Todd</td>
+                    <td>2010</td>
+                    <td>Accion</td>
+                </tr>
+                <tr>
+                    <td>Interstellar</td>
+                    <td>2015</td>
+                    <td>Ciencia Ficcion</td>
+                </tr>
+                <tr>
+                    <td>Parasite</td>
+                    <td>2019</td>
+                    <td>Drama</td>
+                </tr>
+            </table>
+        </section>
+
     </main>
     <aside>
         <article>
-            <h3>Articulo Adicional</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eaque ducimus. Itaque voluptatibus eos error numquam iste saepe, repudiandae, facilis unde dolorem modi dicta illo aut aspernatur dolorum praesentium culpa libero vero eaque, temporibus quis ad cupiditate? Distinctio, voluptatum enim.</p>
+            <h3 class="titulo noticia">Articulo Adicional</h3>
+            <p class="adicional">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, eaque ducimus. Itaque voluptatibus eos error numquam iste saepe, repudiandae, facilis unde dolorem modi dicta illo aut aspernatur dolorum praesentium culpa libero vero eaque, temporibus quis ad cupiditate? Distinctio, voluptatum enim.</p>
+            <p class="adicional">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aliquid vitae voluptatem rerum, laborum quibusdam.</p>
         </article>
     </aside>
 </body>
