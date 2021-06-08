@@ -49,7 +49,7 @@ p:first-of-type{
 }
 
 /* ntth-of-typer() sirve para dar estilos a partes en especifico  */
-li:nth-of-type(2){
+ol>li:nth-of-type(2){
     font-style: italic;
     background-color: rebeccapurple;
     color: white;
@@ -60,6 +60,27 @@ tr, td, th, table{
     border-spacing: 0;
     border-collapse: collapse;
 }
+/* Cololar la tabla en el medio de la pagina */
 table{
     margin:0 auto;
+}
+/* de los n elemtos que hay utilza cada 3
+li:nth-of-type(3n){
+    color: tomato;
+    background-color: palegreen;
+} */
+/* nth-of-type(An+B) */
+li:nth-of-type(3n+1){
+    color: tomato;
+    background-color: palegreen;
+}
+
+#btn{
+    background-color: teal;
+    color: white;
+}
+
+#btn:hover{
+    cursor: pointer;
+    background-color: aquamarine;
 }
