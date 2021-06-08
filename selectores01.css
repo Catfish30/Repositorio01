@@ -1,0 +1,20 @@
+/* Etiquetas */
+/* , = y */
+
+article, h1{
+    background-color: skyblue;
+}
+/* Referencia a los hijos article que tenga section en cualquier nivel */
+/* Espacio = dentro a cualquier nivel */
+section article{
+    border: 2px solid salmon;
+}
+/* hijos a primer nivel */
+ul > li{
+    font-family: Arial;
+    color: limegreen;
+}
+
+nav > ul > ol > li {
+    color: mediumpurple;
+}
