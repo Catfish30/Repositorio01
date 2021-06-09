@@ -1,0 +1,20 @@
+.hexadecimal{
+    /* valor hexadecimal en tres pares  RRGGBB */
+    background-color: #95afee;
+}
+.rgb{
+    background-color: rgb(230,200,120);
+}
+
+.rgb > p{
+    font-weight: bold;
+    /* el alpha va de 0 a 1 , es la transparencia*/
+    color: rgba(160, 31, 185, 0.3);
+}
+.hsl{
+    background-color: hsl(280,90%,90%);
+}
+
+.degradado{
+    background-image: linear-gradient(-130deg, rgb(38, 38, 70),rgb(247, 169, 169));
+}

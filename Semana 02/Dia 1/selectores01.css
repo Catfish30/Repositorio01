@@ -79,8 +79,9 @@ li:nth-of-type(3n+1){
     background-color: teal;
     color: white;
 }
-
+/* hover, aplica cuando se coloca el mouse encima del elemento */
 #btn:hover{
     cursor: pointer;
     background-color: aquamarine;
 }
+/* BEM - BLOCK - ELEMENT MODIFIER */

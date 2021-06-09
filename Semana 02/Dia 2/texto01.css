@@ -1,0 +1,28 @@
+/* font face permite utilizar una fuente externa es importante usar las comillas simples */
+@font-face{
+    font-family: 'hendrick';
+    src: url('./hendrick.otf');
+}
+
+.familia{
+    font-family:'hendrick', Arial, Helvetica, sans-serif;
+    font-size: 70px;
+}
+.google{
+    font-family: 'Baloo Tammudu 2',cursive;
+    font-weight: bold;
+}
+/* cdn conjunto de servidores, devuleve el mas cercano */
+
+.fontstyle{
+    font-style: italic;
+}
+.textindent{
+    text-indent: 20px;
+}
+.wordspacing{
+    word-spacing: 3px;
+}
+.lineheight{
+    line-height: 30px;
+}
