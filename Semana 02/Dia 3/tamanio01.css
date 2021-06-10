@@ -1,0 +1,27 @@
+*{
+    border: 1px solid black;
+}
+h1{
+    font-size: 30px;
+}
+main{
+    width: 800px;
+}
+.articulo1{
+    width: 300px;
+    height: 300px;
+}
+.articulo2{
+    font-size: 7pt;
+    width: 12.5%;
+}
+
+/* ancho cambia de acuerdo al 50 % del main que es el padre */
+
+.big{
+    border: 1px solid blue;
+    background-color: blueviolet;
+    /* viewport tamanio disponible que tiene el navegador */
+    width: 100vw;
+    height: 500px;
+}

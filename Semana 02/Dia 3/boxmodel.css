@@ -1,0 +1,22 @@
+*{
+    border: 1px solid red;
+    /* reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    padding: 20px;
+    margin: 0px;
+    width: 300px;
+    height: 200px;
+    box-sizing: border-box;
+    /* incluye borde padding y contenido */
+}
+span{
+    border: 1px solid gray;
+    background-color: greenyellow;
+    display: inline;
+    /* inline se ajusta al contenido y si hay espacio se acomoda, block si sobra espacio da igual ocupara todo el ancho y son como bloques una encima de otro */
+    /* inline uno despues de otro,block no tiene un elemento a su lado,inline-block combinacion de los dos */
+}

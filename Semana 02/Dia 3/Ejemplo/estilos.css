@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: burlywood;
+    font-family: 'Odibee Sans', cursive;
+    color: white;
+}
+header{
+    text-align: center;
+    padding: 20px;
+}
+img{
+    width: 100%;
+}
+.imagen{
+    width: 500px;
+    margin: 0 auto;
+}
+p,ul{
+    text-align: center;
+    padding: 20px 40px;
+}
+li{
+    list-style: none;
+}
