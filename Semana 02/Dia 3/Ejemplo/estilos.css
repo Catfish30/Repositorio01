@@ -25,4 +25,5 @@ p,ul{
 }
 li{
     list-style: none;
+    /* cambia las vinietas de la lista */
 }

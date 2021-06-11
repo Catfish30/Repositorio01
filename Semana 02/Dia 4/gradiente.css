@@ -1,0 +1,16 @@
+.peru{
+    width: 500px;
+    height: 400px;
+    background-image: linear-gradient(90deg,red, white, white, red);
+}
+.filtro{
+    filter: blur(3px);
+}
+.mujr{
+    width: 500px;
+  
+  filter: blur(3px) grayscale(1);
+}
+.mujr:hover{
+    filter:brightness(1)
+}

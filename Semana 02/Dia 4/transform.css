@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.transformacion{
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    transform:skew(23deg,353deg) rotate(300deg) translate3d(-300px,100px, 50px);
+    padding: 30px;
+    /* translate mover elementos */
+}

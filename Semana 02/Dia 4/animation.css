@@ -1,0 +1,20 @@
+.animacion{
+    width: 500px;
+    height: 500px;
+    animation: miAnimacion 4s infinite; /* miAnimacion es un nombre cualquiera */
+}
+
+@keyframes miAnimacion{
+    0%{
+        background-color: aqua;
+    }
+    20%{
+        background-color: black;
+    }
+    60%{
+        background-color: blueviolet;
+    }
+    90%{
+        background-color: aqua;
+    }
+}
