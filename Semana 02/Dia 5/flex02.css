@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+a{
+    color: aliceblue;
+    padding: 15px;
+    text-decoration: none;
+
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.etiqueta00{
+    font-size: 40px;
+    flex-grow: 5;
+}
+.etiqueta01{
+    flex-grow: 0.5;
+}
+.etiqueta02{
+    flex-grow: 0.5;
+}
+.etiqueta03{
+    flex-grow: 0.5;
+}
+.etiqueta04{
+    flex-grow: 0.1;
+}
