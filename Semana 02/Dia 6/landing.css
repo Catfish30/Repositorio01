@@ -51,5 +51,5 @@ figure>img{
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 2%;
-    margin-right: 2%;
+    margin-right: 2%;   /* 96% de widtg + 2% rigth y 2% left */
 }
