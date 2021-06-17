@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+article{
+    border: 1px solid red;
+    margin: 10px;
+}
+h1{
+    background-color: yellow;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+/* break point 768px */
+@media screen and (max-width:768px) {
+    /* y todo el css que ponga aqui aplica  a768px */
+    h1{
+        background-color: purple;
+        color: salmon;
+    }
+}
+@media screen and (max-width:420px) {
+    h1{
+        background-color: grey;
+    }
+    main{
+        display: flex;
+        flex-wrap:wrap ;
+    }
+}

@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* variables */
+:root{
+    --color-primario:#FB8F1D;
+    --collor-secundario:hsl(30, 99%, 91%);
+}
+button{
+    outline: none;
+}
+/* nav li:nth-of-type(4){
+    margin-right: 5px;
+} */
+nav{
+    font-family: 'Lato', sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* espacio entre los items */
+    align-items: center;
+}
+/* > solo los primeros img */
+nav>img{
+    max-width: 50%;
+   /* justify-content: flex-start;  Espacacio horizontales */
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;  /* 0 arriba y abajo, auto a los costados*/    
+}
+.btn-register{
+    background-color: var(--color-primario);
+    border-radius: 7px;
+    border: 1px solid var(--color-primario);
+    /* border-color:var(--color-primario); */
+    color: white;
+    padding: 8px 18px;
+    cursor: pointer;
+    margin-right: 20px;
+    
+    /* -webkit-text-stroke: 0.5px black; */
+}
+.btn-login{
+    background-color:white;
+    border-radius: 7px;
+    border: 1px solid var(--color-primario);
+    /* border-color:var(--color-primario); */
+    color:var(--color-primario);
+    padding: 8px 18px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav li{
+    padding: 10px;
+    list-style: none;
+}
+
+/* RWD MENU */
+
+#check{
+    position: absolute;
+    visibility: hidden; /* No se ve en la pagina */
+    z-index: -99;
+}
+
+.menu{
+    transition: 0.5s;
+}
+.show-menu-btn, .hide-menu-btn{
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .menu{
+        position: fixed;
+        background-color: var(--collor-secundario);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        text-align: center;
+        padding: 100px 0;
+        z-index: 20;
+        flex-direction: column;
+    }
+    .menu li{
+        padding: 15px;
+        font-size:20px;
+    }
+    .btn-login, .btn-register{
+        font-size:20px;
+    }
+    .hide-menu-btn{
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        display: block;
+    }
+    .show-menu-btn{
+        display: block;
+    }
+/* pseudoclase checked hace referencia si mi checbox esta activado  */
+/* ~  hace referencia a los elementos indicados*/
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+    /* padding: 10px; */
+    font-family: 'Lato', sans-serif;
+}
+.img-header{
+    max-width: 80%;
+    padding: 30px;
+}
+.header-contenido{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin: auto;
+    height: 100%;
+    width: 40%;
+    line-height: 70px; */
+    justify-content: space-evenly;
+    width: 30%;
+    padding: 30px;
+    margin-left: 100px;
+
+}
+.btn-search{
+    background-color:var(--color-primario);
+    border-radius: 7px;
+    border: 1px solid var(--color-primario);
+    color:white;
+    padding: 8px 18px;
+    cursor: pointer;
+    /* margin: 0 30%; */
+    width: 40%;
+    min-width: 150px;
+}
+div>input{
+    /* border: 0; */
+    padding: 10px;
+    border-radius: 10px;
+}
