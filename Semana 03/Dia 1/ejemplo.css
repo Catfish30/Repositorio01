@@ -5,7 +5,12 @@
     /* border: 1px solid gray; */
 }
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-/* variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body{
+    margin: 0 15%;
+}
 :root{
     --color-primario:#FB8F1D;
     --collor-secundario:hsl(30, 99%, 91%);
@@ -90,6 +95,15 @@ header{
     font-family: 'Lato', sans-serif;
     justify-content: space-between;
 }
+section{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* padding: 10px; */
+    justify-content: space-between;
+}
 .img-header{
     max-width: 80%;
     padding: 30px;
@@ -130,17 +144,88 @@ div>input{
     border-radius: 10px;
     border: 1px solid var(--color-tercero) ;
 }
-h1{
+header h1{
     font-size: 45px;
+    font-family: 'Merriweather', serif;
+}
+section h1{
+    font-size: 35px;
+    font-family: 'Merriweather', serif;
 }
 .li_disabled{
     color: #B8BECD;
     font-size: 16px;
 }
+.section-contenido{
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin-right: 100px;
+    /* margin-top: 10px; */
+    justify-content: center;
+    margin-left: 50px;
 
-
-
-
+}
+section p{
+    font-family: 'Lato', sans-serif;
+    margin: 25px 0;
+    text-align: justify;
+    color: var(--color-tercero);
+}
+.img-section{
+    max-width: 80%;
+    display: block;
+    margin: auto;
+}
+.section-lugares{
+    display: flex;
+    flex-direction: column;
+}
+.section-top{
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: space-between; /* espacio entre los items */
+    align-items: center;
+    margin: 20px 0;
+}
+section a{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+.section-fotos{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+.img-lugares{
+    width: 220px;
+    height: 330px;
+    display: flex;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.p-lugar{
+    margin:5px 0;
+}
+h4{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+.name-place{
+    padding: 15px;
+    position: absolute;
+    background-color: white;
+    bottom: -9px;
+    left: -9px;
+    border-radius: 10px;
+}
+.card{
+    position: relative;
+    width: 100%;
+}
 
 
 
