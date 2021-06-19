@@ -180,6 +180,7 @@ section p{
 .section-lugares{
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 .section-top{
     font-family: 'Merriweather', serif;
@@ -192,20 +193,21 @@ section a{
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     color: var(--color-primario);
-    font-weight: bold;
 }
 .section-fotos{
     display: flex;
     flex-direction: row;
     margin-top: 30px;
     justify-content: space-between;
+    margin: 0 30px ;
 }
 .img-lugares{
-    width: 220px;
-    height: 330px;
+    width: 200px;
+    height: 320px;
     display: flex;
     object-fit: cover;
     border-radius: 10px;
+    
 }
 .p-lugar{
     margin:5px 0;
@@ -219,15 +221,119 @@ h4{
     position: absolute;
     background-color: white;
     bottom: -9px;
-    left: -9px;
+    left: -7px;
     border-radius: 10px;
 }
 .card{
     position: relative;
     width: 100%;
 }
+.testimonials{
+    font-family: 'Lato', sans-serif;
+    max-width: 35%;
+    margin: auto;
+}
+.start-checked {
+    color: #FFBB0C;
+}
+.test{
+    margin-bottom: 120px;
+}
+.section-stories{
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 ;
+    margin-bottom: 270px;
+}
+.p-storie{
+    font-size: 15px;
+    text-align: justify;
+}
+.img-storie{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+}
+.name-storie{
+    font-size: 15px;
+    position: absolute;
+    /* bottom: -20px; */
+    top: 190px ;
+    background-color: white;
+    width: 200px;
+    text-align: justify;
+}
+h4{
+    margin-top: 20px;
+}
+footer{
+    background-color: #F9F9FB;
+    display: flex;
+    flex-direction: column;
+    font-family:  'Lato', sans-serif;
+    color: var(--color-tercero);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    padding-top: 30px;
+}
+.logoq{
+    
+    display: flex;
+    flex-direction: row;
+}
+.listas{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    /* flex-grow: 5; */
+    margin: auto;
+    padding: 0 30px;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
 
-
+}
+.log{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+.logof{
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    width: 40%;
+    font-size: 12px;
+}
+footer>div>div>img{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+} 
+footer>div>div>p{
+    margin: 5px 0;
+}
+ul{
+    padding: 0 30px;
+    list-style: none;
+    align-items: center;
+    font-size: 12px;
+}
+li{
+    padding: 5px 0;
+}
+.titulo{
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
 
 @media screen and (max-width:768px) {
     .menu{
