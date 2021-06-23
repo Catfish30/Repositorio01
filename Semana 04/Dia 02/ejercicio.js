@@ -11,11 +11,11 @@ total = 0
 
 if( tipo == "A" && tamanio === 1){
     total = kilos * 5 + (0.2 * kilos)
-    if(tipo == "A" && tamanio === 2){
+    }if(tipo == "A" && tamanio === 2){
         total = kilos *5 + (0.3 * kilos)
 }else if(tipo == "B" && tamanio === 1){
     total = kilos * 5 + (0.35 * kilos)
-    if(tipo == "B" && tamanio === 2){
+    }if(tipo == "B" && tamanio === 2){
          total = kilos *5 + (0.5 * kilos)
 }else{
     console.log("Datos invalidos")
