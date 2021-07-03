@@ -19,7 +19,7 @@ class Comprobante {
     calcularSubTotal(cant,p_unit){
         return cant*p_unit
     }
-
+    // static hace que no se requiera crear un nuevo objeto (no necesita una instancia)
     static mostrarFecha(){
         console.log(new Date());
     }
