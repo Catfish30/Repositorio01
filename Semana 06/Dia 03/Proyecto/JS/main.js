@@ -72,7 +72,7 @@ let listaPlatillos = [
                 <p>${plato.descripcion}</p>
                 <div class="precio">
                     <span>S/.${plato.precio}</span>
-                    <button class="btn-agregar">
+                    <button class="btn-agregar" data-idplato="${plato.id}">
                         Agregar
                     </button>
                 </div>
@@ -82,3 +82,88 @@ let listaPlatillos = [
     contenido.innerHTML=htmlTarjetas
   }
 dibujarTarjetas()
+
+
+let carrito = []
+
+let tbodyCarrito = document.getElementById("tbody-carrito")
+
+//Obtenemos un HTML collection
+let btnsAgregar = document.getElementsByClassName("btn-agregar")
+
+// console.log(btnsAgregar);
+
+let arrayBtnsAgregar = Array.from(btnsAgregar)
+// console.log(arrayBtnsAgregar);
+
+arrayBtnsAgregar.forEach((boton)=>{
+  boton.addEventListener("click",()=>{
+    let idObtenido = boton.getAttribute("data-idplato")
+
+    let platoObtenido = buscarPlatoPorId(+idObtenido)
+    // console.log(platoObtenido);
+
+    agregarACarrito(platoObtenido)
+  })
+})
+
+let buscarPlatoPorId = (id)=>{
+  
+  for(let i=0; i <listaPlatillos.length; i++){
+    if( id === listaPlatillos[i].id){
+      return listaPlatillos[i]
+    } 
+  }
+}
+
+let agregarACarrito = (platoAPedir) =>{
+    let indicePlato = carrito.findIndex((Pedido)=>{
+      if(Pedido.plato.id === platoAPedir.id ){
+        return Pedido
+      }
+    })
+
+    if(indicePlato === -1){
+      let pedido = {
+        plato: platoAPedir,
+        cantidad: 1
+      }
+      carrito.push(pedido)
+    }else{
+      carrito[indicePlato].cantidad++
+    }
+
+    dibujarCarrito()
+    // console.log(carrito);
+}
+
+
+let dibujarCarrito = ()=> {
+  let htmlCarrito = ""
+
+  carrito.forEach((pedido)=>{
+    htmlCarrito = htmlCarrito +`
+    <tr>
+      <td>${pedido.plato.nombre}</td>
+      <td>${pedido.cantidad}</td>
+      <td>${pedido.plato.precio}</td>
+      <td>${pedido.cantidad * pedido.plato.precio}</td>
+    </tr>`
+  })
+
+  tbodyCarrito.innerHTML = htmlCarrito
+}
+
+
+let btnPagar = document.getElementById("btn-pagar")
+
+btnPagar.addEventListener("click",()=>{
+  let deseaGuardar = confirm("Desea guardar esta boleta")
+
+  if(deseaGuardar === true && carrito.length > 0){
+
+    let carritoString = JSON.stringify(carrito)
+
+    localStorage.setItem("pedidoGuardado",carritoString)
+  }
+})
