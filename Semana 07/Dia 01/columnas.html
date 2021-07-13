@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    .oscuro{
+        background-color: steelblue;
+    }
+    .claro{
+        background-color: lightsalmon;
+    }
+</style>
+</head>
+<body>
+    <main class="container">
+        <h2>Columnas</h2> <!-- Para utilizar columnas en bootstrap deben estar dentro de un "row"   -->
+        <div class="row">
+            <div class="col oscuro">
+                1st Columna
+            </div>
+            <div class="col claro">
+                2nd Columna
+            </div>
+            <div class="col oscuro">
+                3rd Columna
+            </div>
+            <div class="col claro">
+                4th Columna
+            </div>
+            <div class="col oscuro">
+                5th Columna
+            </div>
+            <div class="col claro">
+                6th Columna
+            </div>
+            <hr>
+            <h2>Columnas definidas</h2>
+            <div class="row">
+                <div class="col-11 oscuro">
+                    Columna de 8
+                </div>
+                <div class="col-1 claro">
+                    Columna de 4
+                </div>
+            </div>
+            <hr>
+            <h2>Columna Responsivas</h2>
+            <h3><code>col-xl-#</code></h3>
+            <h5>xl -> </h5>
+            <div class="row">
+                <div class="col-xl-6 oscuro">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, voluptates?</p>
+                </div>
+                <div class="col-xl-6 claro">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, modi.</p>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <h3><code>col-md-#</code></h3>
+            <h5>md -></h5>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis.</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis.</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quis.</p>
+                </div>
+
+            </div>
+
+            <hr>
+            <div class="row">
+                <div class=" col-xl-7 col-lg-6 col-md-12 col-sm-12 oscuro">
+                    Noticia principal
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 claro">
+                    Noticia Mediana Importancia
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 col-sm-4 oscuro">
+                    Anuncios
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
