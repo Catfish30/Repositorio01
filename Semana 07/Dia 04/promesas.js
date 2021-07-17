@@ -10,7 +10,8 @@ const hornearTorta = () =>{
     })
 }
 
-hornearTorta().then((resultado)=>{
+hornearTorta()
+.then((resultado)=>{
     console.log(resultado);
 })
 .catch((error)=>{
