@@ -4,7 +4,7 @@ const imprimirProductos = (arregloProductos) => {
 
     let estadoContenido = '' //Guardar html generado
 
-    arregloProductos.forEach(({prod_nombre,prod_descripcion,prod_precio,prod_imagen}) => {
+    arregloProductos.forEach(({prod_id,prod_nombre,prod_descripcion,prod_precio,prod_imagen}) => {
         let cardProducto = 
         `<div class="col-sm-12 col-md-3 mb-2">
             <div class="card">
@@ -14,6 +14,8 @@ const imprimirProductos = (arregloProductos) => {
                     <div class="card-text">
                         ${prod_descripcion}
                     </div>
+                    <button class="btn btn-danger eliminar" data-id="${prod_id}">Eliminar</button>
+                    <button class="btn btn-info actualizar" data-id="${prod_id}">Actualizar</button>
                 </div>
                 <div class="card-footer">
                     <span class="fw-bold"> Precio: </span> ${prod_precio}
