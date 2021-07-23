@@ -61,10 +61,11 @@ const actualizarProducto = async (objProducto) => {
         body:JSON.stringify(objProducto),
         headers:{'Content-Type':'application/json'}
     }
+
     try {
-        const respuesta = await fetch(`${URL}/${objProducto.prod_id}`,configuracion)
-        const productoAct = await respuesta.json()
-        return productoAct
+        const respuesta = await fetch(`${URL}/${objProducto.prod_id}`, configuracion)
+        const productoActualizado = await respuesta.json()
+        return productoActualizado
     } catch (error) {
         throw error
     }

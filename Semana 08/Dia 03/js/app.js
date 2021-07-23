@@ -44,7 +44,7 @@ formCrear.addEventListener("submit", async (e) => {
 
     //Producto editado tiene la info del formulario y el id del producto a editar
     const productoEditado = {
-        prop_id:productoActualizar,
+        prod_id:productoActualizar,
         prod_nombre: formCrear.prod_nombre.value,
         prod_descripcion: formCrear["prod_descripcion"].value,
         prod_precio: formCrear["prod_precio"].value,
@@ -103,7 +103,7 @@ const getBotonesEliminar = () => {
 const getBotonesActualizar = () => {
     const btnActualizar = document.getElementsByClassName("actualizar")
     const arrBtnActualizar = Array.from(btnActualizar)
-    
+
     arrBtnActualizar.forEach(boton => {
         boton.addEventListener("click",async() => {
             const id = boton.getAttribute("data-id")
