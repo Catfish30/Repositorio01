@@ -1,0 +1,14 @@
+{
+  "name": "dia-05",
+  "version": "1.0.0",
+  "description": "Primer proyecto en node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Elias",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
