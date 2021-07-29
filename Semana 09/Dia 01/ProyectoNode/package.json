@@ -1,0 +1,15 @@
+{
+  "name": "proyectonode",
+  "version": "1.0.0",
+  "description": "pryecto de prueba",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Elias",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
