@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Footer from './components/Footer'
 import ListaTareas from './components/ListaTareas'
 import InputTarea from './components/InputTarea'
@@ -24,6 +24,11 @@ export default function App() {
     }
 
     const miTitulo = "Mi app"
+
+    useEffect(()=>{
+        setTexto("")
+    },[tareas])
+
     return (
         <div>
             <h1>{miTitulo}</h1>
