@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Footer from './components/Footer'
 import ListaTareas from './components/ListaTareas'
+import InputTarea from './components/InputTarea'
 
 export default function App() {
     const [tareas,setTareas] = useState(["Comer"])
@@ -16,13 +17,21 @@ export default function App() {
         setTexto(nuevoTexto)
     }
 
+    const eliminarTarea = (indice) => {
+        let tareasTmp = [...tareas]
+        tareasTmp.splice(indice,1)
+        setTareas(tareasTmp)
+    }
+
     const miTitulo = "Mi app"
     return (
         <div>
             <h1>{miTitulo}</h1>
 
-            <ListaTareas tareas = {tareas}/>
+            <ListaTareas tareas = {tareas} eliminarTarea={eliminarTarea}/>
             <hr/>
+
+            <InputTarea texto={texto} manejarTexto={manejarTexto} annadirTarea={annadirTarea}/>
 
             <input type="text" value={texto} onChange={(e) => {manejarTexto(e.target.value)}}/>
 
