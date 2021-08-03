@@ -22,7 +22,7 @@ export default function CrearProductoView() {
     return (
         <div>
             <h1>Crear Producto</h1>
-            <FormProducto value={vale} actualizarInput={actualizarInput} />
+            <FormProducto value={value} actualizarInput={actualizarInput} />
         </div>
     )
 }
