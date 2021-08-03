@@ -15,6 +15,22 @@ const obtenerProductos = async () => {
     }
 }
 
+const crearProducto = async (nuevoProducto) => {
+    try {
+        const headers = {
+            "Content-Type":"application/json"
+        }
+        //.post(URL,DATA,HEADERS)
+        let {data} = await axios.post(URL,nuevoProducto,{ headers })
+        return data
+    } catch (error) {
+        throw error        
+    }
+}
+
+
+
 export {
-    obtenerProductos
+    obtenerProductos,
+    crearProducto
 }
