@@ -1,9 +1,9 @@
 import axios from "axios"
+import { storage } from "../config/Firebase"
 
 // const URL = `https://6108335bd73c6400170d38a1.mockapi.io/productos`
 
 const URL = `${process.env.REACT_APP_API}productos`
-console.log(URL)
 
 const obtenerProductos = async () => {
     try {
@@ -49,10 +49,28 @@ const editarProducto = async (productoEditado,id) =>{
     }
 }
 
+const subirArchivo = (imagen) => {
+    return new Promise((resolve, reject) => {
+        let refStorage = storage.ref(`fotos/${imagen.name}`)
+        let tareaSubir = refStorage.put(imagen)
+
+        tareaSubir.on("state_changed",
+            () => {},
+            (error) => {reject(error)},
+            () => {
+                tareaSubir.snapshot.ref.getDownloadURL()
+                .then((urlImagen) => {
+                    resolve(urlImagen)
+                })
+            }
+        )
+    })
+}
 
 export {
     obtenerProductos,
     crearProducto,
     obtenerProductoPorId,
-    editarProducto
+    editarProducto,
+    subirArchivo,
 }

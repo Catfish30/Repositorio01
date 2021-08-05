@@ -1,7 +1,13 @@
 import React from 'react'
+import {useRef} from 'react'
+//useRef como una id de react
 
+// let imagen;
 
-export default function FormProducto({value, actualizarInput, manejarSubmit}) {
+export default function FormProducto({value, actualizarInput, manejarSubmit,manejarImagen}) {
+
+    const inputFile = useRef()
+
 
     return (
 
@@ -41,6 +47,20 @@ export default function FormProducto({value, actualizarInput, manejarSubmit}) {
                          Oferta Producto
                     </label>
                 </div>
+
+                <div className="mb-3">
+                    <label className="form-label">Imagen</label>
+
+                    <input 
+                        type="file" 
+                        className="form-control"
+                        ref={inputFile}
+                        onChange={(e) => {manejarImagen(e)}}
+                    />
+                </div>
+
+
+
                 <div className='d-grid'>
                     <button className="btn btn-primary btn-lg" type="submit">
                         Guardar
