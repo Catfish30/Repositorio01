@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+Semana 10/store/.env
+
 # dependencies
 /node_modules
 /.pnp
