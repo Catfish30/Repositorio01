@@ -32,14 +32,22 @@ export default function NavTop() {
                         </Link>
                     </Nav.Link>
                     <Nav.Link>
-                    <Link to="/carrito">
-                            Carrito
+                        <Link to="/productos">
+                            Productos
                         </Link>
                     </Nav.Link>
                     <Nav.Link>
-                        <Badge badgeContent={totalCarrito} color="primary">
+                    <Link to="/carrito">
+                            Carrito
+                            <Badge badgeContent={totalCarrito} color="primary">
                             <ShoppingCartIcon />
                         </Badge>
+                        </Link>
+                    </Nav.Link>
+                    <Nav.Link>
+                        <Link to="/login">
+                            Ingresar
+                        </Link>
                     </Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
