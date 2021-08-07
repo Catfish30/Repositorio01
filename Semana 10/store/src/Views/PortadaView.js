@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect,useState } from 'react'
 import { obtenerProductos } from '../Services/productoService'
 import GrupoProductos from '../Components/GrupoProductos'
+import CustomCarousel from '../Components/CustomCarousel'
 
 export default function PortadaView() {
 
@@ -22,6 +23,7 @@ export default function PortadaView() {
 
     return (
         <div>
+            <CustomCarousel />
             <GrupoProductos productos={productos} />
         </div>
     )

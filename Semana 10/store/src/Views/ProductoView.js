@@ -1,9 +1,13 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { CarritoContext } from '../context/carritoContext'
+
 import { useParams } from 'react-router'
 // params pasamos parametros en la ruta
 import { obtenerProductoPorId } from '../Services/productoService'
 import Cargando from '../Components/Cargando'
+import Swal from 'sweetalert2'
+import { useHistory } from 'react-router'
 
 export default function ProductoView() {
 
@@ -11,6 +15,11 @@ export default function ProductoView() {
     const [cargando, setCargando] = useState(true)
 
     const { id } = useParams()
+
+    const history = useHistory()
+
+
+    const {annadirCarrito} = useContext(CarritoContext)
 
     const getProducto = async () => {
         try {
@@ -21,6 +30,25 @@ export default function ProductoView() {
             console.log(error)
         }
     }
+
+    const annadirCarritoContext = async () => {
+        annadirCarrito(producto)
+        const resultado = await Swal.fire({
+            icon:'success',
+            title:'Producto Annadido',
+            showConfirmButton:'true',
+            showDenyButton:'true',
+            confirmButtonText:'Seguir comprando',
+            denyButtonText:'Ir a carrito'
+        })
+        
+        if(resultado.isConfirmed){
+            history.push('/')
+        }else if(resultado.isDenied){
+            history.push('/carrito')
+        }
+    }
+
     useEffect(() => {
         getProducto()
     },[])
@@ -44,6 +72,10 @@ export default function ProductoView() {
                                 <span className="fw-bold">
                                     S/.{producto.prod_precio}
                                 </span>
+
+                                <button className="btn btn-dark btn-lg" onClick={annadirCarritoContext}>
+                                <i className="fas fa-shopping-cart"> Annadir Carrito</i>
+                                </button>
                             </div>
                         </div>
                     </div>

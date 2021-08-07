@@ -4,15 +4,19 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import NavTop from './Components/NavTop'
 import Routes from './Routes'
 import CustomCarousel from './Components/CustomCarousel'
+import CarritoContextProvider from './context/carritoContext'
+
 
 export default function App() {
   return (
     <Router>
-      <NavTop />
-      <CustomCarousel />
-      <Switch>
-        <Routes/>
-      </Switch>
+      <CarritoContextProvider>
+        <NavTop />
+        <Switch>
+          <Routes/>
+        </Switch>
+      </CarritoContextProvider>
     </Router>
   )
 }
+
