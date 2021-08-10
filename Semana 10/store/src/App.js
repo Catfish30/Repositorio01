@@ -5,17 +5,20 @@ import NavTop from './Components/NavTop'
 import Routes from './Routes'
 import CustomCarousel from './Components/CustomCarousel'
 import CarritoContextProvider from './context/carritoContext'
+import { AuthContextProvider } from './context/authContext'
 
 
 export default function App() {
   return (
     <Router>
-      <CarritoContextProvider>
-        <NavTop />
-        <Switch>
-          <Routes/>
-        </Switch>
-      </CarritoContextProvider>
+        <AuthContextProvider>
+            <CarritoContextProvider>
+                <NavTop />
+                <Switch>
+                  <Routes/>
+                </Switch>
+            </CarritoContextProvider>
+        </AuthContextProvider>
     </Router>
   )
 }
