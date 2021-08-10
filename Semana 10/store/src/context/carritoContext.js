@@ -1,4 +1,4 @@
-import { useState,createContext } from "react";
+import { useState,createContext, useEffect } from "react";
 
 export const CarritoContext = createContext()
 
@@ -28,6 +28,19 @@ const CarritoContextProvider = (props) => {
 
         setCarrito([...carrito,{...producto, cantidad:1}])
     }
+
+    useEffect(() => {
+        const carritoStorage = JSON.parse(localStorage.getItem('carrito'))
+        if(carritoStorage.length > 0){
+            setCarrito(carritoStorage)
+        }
+    },[])
+
+    useEffect(() => {
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+    },[carrito])
+
+
 
     return(
         <CarritoContext.Provider value={{carrito, annadirCarrito}}>

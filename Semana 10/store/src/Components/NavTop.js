@@ -38,6 +38,7 @@ export default function NavTop() {
                             Productos
                         </Link>
                     </Nav.Link>
+                    </Nav>
                     <Nav.Link>
                     <Link to="/carrito">
                             Carrito
@@ -45,17 +46,40 @@ export default function NavTop() {
                             <ShoppingCartIcon />
                         </Badge>
                         </Link>
+                        <Link to="/checkout">
+							Comprar!
+						</Link>
                     </Nav.Link>
                     {userState ? (
-						<Nav.Link>
-							<span onClick={signOut}>Salir</span>
-						</Nav.Link>
+
+						// <Nav.Link>
+						// 	<span onClick={signOut}>Salir</span>
+						// </Nav.Link>
+
+                            <NavDropdown 
+							title={
+								<div className="d-inline">
+									<img
+										src={userState.photoURL}
+										className="me-2"
+										style={{borderRadius:"50%",width:"30px"}}
+										alt="avatar"
+									/>
+									<span>{userState.displayName}</span>
+								</div>
+							}
+							>
+								<NavDropdown.Item onClick={signOut}>
+									Salir
+								</NavDropdown.Item>
+                            </NavDropdown>
+
 					) : (
 						<Nav.Link>
 							<Link to="/login">Ingresar</Link>
 						</Nav.Link>
 					)}
-                </Nav>
+                
                 </Navbar.Collapse>
             </Container>
             </Navbar>
