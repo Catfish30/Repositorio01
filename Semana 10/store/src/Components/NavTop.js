@@ -28,28 +28,28 @@ export default function NavTop() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link>
-                        <Link to="/">
+                    
+                        <Link to="/" className='nav-link'>
                             Inicio
                         </Link>
-                    </Nav.Link>
-                    <Nav.Link>
-                        <Link to="/productos">
+                    
+                    
+                        <Link to="/productos" className='nav-link'>
                             Productos
                         </Link>
-                    </Nav.Link>
+                    
                     </Nav>
-                    <Nav.Link>
-                    <Link to="/carrito">
+                    <Nav>
+                    <Link to="/carrito" className='nav-link'>
                             Carrito
                             <Badge badgeContent={totalCarrito} color="primary">
                             <ShoppingCartIcon />
                         </Badge>
                         </Link>
-                        <Link to="/checkout">
+                        <Link to="/checkout" className='nav-link'>
 							Comprar!
 						</Link>
-                    </Nav.Link>
+                    
                     {userState ? (
 
 						// <Nav.Link>
@@ -79,7 +79,7 @@ export default function NavTop() {
 							<Link to="/login">Ingresar</Link>
 						</Nav.Link>
 					)}
-                
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
             </Navbar>
